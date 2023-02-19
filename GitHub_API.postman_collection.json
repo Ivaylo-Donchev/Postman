@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "e69854b5-4476-41d2-9d47-ac7bce3e9b2c",
+		"name": "GitHub_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25744953"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET_Single_Issue",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CHEK STATUS CODE\", function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"\r",
+									"    pm.test(\"Status code is 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"\r",
+									"    pm.test(\"STATUS CODE IS 200 second example\", function(){\r",
+									"        pm.expect(pm.response.code).equal(200)\r",
+									"\r",
+									"        pm.test(\"CHEK Issue NUMBER\", function)\r",
+									"\r",
+									"    })\r",
+									"    });\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/Ivaylo-Donchev/postman/issues/1\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"Ivaylo-Donchev",
+								"postman",
+								"issues",
+								"1\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_Single_Issue_Labels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/dimosoftuni/postman/issues/1/labels\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dimosoftuni",
+								"postman",
+								"issues",
+								"1",
+								"labels\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_All_Issue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/dimosoftuni/postman/issues/1\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dimosoftuni",
+								"postman",
+								"issues",
+								"1\n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Create_Issue",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "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",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ivaylo Donchev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title1\" : \"issue from POSTMAN\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/dimosoftuni/postman/issues/1\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dimosoftuni",
+								"postman",
+								"issues",
+								"1\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_more_Issue",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "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",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ivaylo Donchev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title1\" : \"issue from POSTMAN\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/dimosoftuni/postman/issues/1\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dimosoftuni",
+								"postman",
+								"issues",
+								"1\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_Issue_With_Labels",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/testnakov/test-nakov-repo/issues\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"testnakov",
+								"test-nakov-repo",
+								"issues\n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Repos",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "GET_ALL_Repos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "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",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Ivaylo Donchev",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://api.github.com/users/Ivaylo-Donchev/repos\n\n",
+									"protocol": "https",
+									"host": [
+										"api",
+										"github",
+										"com"
+									],
+									"path": [
+										"users",
+										"Ivaylo-Donchev",
+										"repos\n\n"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
